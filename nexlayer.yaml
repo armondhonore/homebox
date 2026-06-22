@@ -1,0 +1,12 @@
+application:
+  name: homebox
+  pods:
+  - name: app
+    image: ghcr.io/hay-kot/homebox:latest
+    path: /
+    servicePorts:
+    - 7745
+    volumes:
+    - name: homebox-data
+      mountPath: /data
+      size: 5Gi
